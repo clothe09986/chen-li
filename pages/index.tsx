@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
-import styled from "styled-components";
+import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import styled from 'styled-components'
 
 // const query = `query MEMBER{
 //                   member {
@@ -17,41 +17,41 @@ import styled from "styled-components";
 //   return { loading, error, data, refetch };
 // };
 
-const StyleContainer = styled.div`
+export const StyleContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30vh;
-`;
+`
 
-const StyleButton = styled.button`
+export const StyleButton = styled.button`
   border: 0px solid #ffffff;
-  background-color: pink;
+  background-color: #cccccc;
   border-radius: 8px;
   width: 120px;
   height: 40px;
-  margin: 12px;
   &:hover {
     opacity: 0.6;
   }
-`;
+`
 
 const Home: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <StyleContainer>
       <div>
         <div className="h4 fw-bold mb-4 text-center">陳立離班系統</div>
         <div className="d-flex justify-content-between">
           <StyleButton
+            className="me-4"
             onClick={() => {
-              router.push("/student");
+              router.push('/student')
             }}
           >
             前台
           </StyleButton>
           <StyleButton
             onClick={() => {
-              router.push("/admin");
+              router.push('/admin')
             }}
           >
             後台
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </StyleContainer>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
