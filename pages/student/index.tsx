@@ -6,7 +6,6 @@ import { useAddApplication } from '../../hook/application'
 import { useGetStudent } from '../../hook/student'
 import aws from 'aws-sdk'
 import { _uuid } from '../../helpers/_uuid'
-import Image from 'next/image'
 
 type Branch = 'branch_1' | 'branch_2' | 'branch_3'
 
