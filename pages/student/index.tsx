@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 import { toast } from 'react-toastify'
 import { StyleButton, StyleContainer } from '..'
 import { useAddApplication } from '../../hook/application'
-import { useGetStudent } from '../../hook/student'
+import { useGet, useGetStudent } from '../../hook/student'
 import aws from 'aws-sdk'
 import { _uuid } from '../../helpers/_uuid'
 
@@ -13,7 +13,8 @@ const StudentPage: NextPage = () => {
   const [studentId, setStudentId] = useState('')
   const [branch, setBranch] = useState<Branch>('branch_1')
   const [isShowForm, setIsShowForm] = useState(false)
-
+  const { data } = useGet()
+  console.log(data)
   return !isShowForm ? (
     <StyleContainer>
       <div>
